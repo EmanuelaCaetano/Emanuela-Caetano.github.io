@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação TVLLE</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="docTVLLE.css">
+</head>
+    <header>
+        TVLLE  -  A Solução Certa para Investir o Seu Dinheiro!
+    </header>
+<body>
+<br><br><br><br><br><br><br><br><br>
+    <ul id="menu">
+        <li><a href="#geral" style="text-decoration:none">Geral</a></li><br>
+        <li><a href="#projeto" style="text-decoration:none">Projeto</a></li><br>
+        <li><a href="#conexao" style="text-decoration:none">Conexões</a></li><br>
+        <li><a href="#dataset" style="text-decoration:none">DataSet'S</a></li><br>
+        <li><a href="#insight" style="text-decoration:none">Insight</a></li><br>
+        <li><a href="#automatizacao" style="text-decoration:none">Automatização</a></li><br>
+        <li><a href="#looker" style="text-decoration:none">LookerStudio</a></li><br>
+        <li><a href="#conclusao" style="text-decoration:none">conclusão</a></li><br>
+    </ul>
+    <div class="titulo"><a name="geral">Geral</a></div><br>
+    <div class="subtitulo">Mercado de Bebidas à cerca do Vinho Nacional e Mundial</div><br>
+    <p>
+        Tema: Mercado de bebidas
+        <br>
+        <br>
+        Este projeto foi desenvolvido por:
+        <br>
+        <br>
+        Emanuela Caetano <a href="https://www.linkedin.com/in/emanuela-caetano/"> - Contato LinkedIn</a>
+        <br>
+        Leonardo Fabricio <a href="https://www.linkedin.com/in/leonardo-fabricio-48bb60157"> - Contato LinkedIn</a>
+        <br>
+        Lucas Alcântara <a href="https://www.linkedin.com/in/lucasalc%C3%A2ntara/"> - Contato LinkedIn</a>
+        <br>
+        Talytta <a href="http://linkedin.com/in/talytta/"> - Contato LinkedIn</a>
+        <br>
+        Vitor <a href="https://www.linkedin.com/in/vitor-brandao9506"> - Contato LinkedIn</a>
+        <br>                                    
+        <br>   
+        Este projeto foi desenvolvido com dados públicos disponibilizados na internet, para saber as fontes clik aqui.
+    </p>
+    <div class="titulo"><a name="projeto">Projeto</a></div><br>
+
+    <p>
+        O  trabalho em questão  foi desenvolvido como projeto final do curso de Engenharia de Dados da Soul Code Academy com carga horária de 750 horas, ademais, requisito obrigatório para a conclusão.<br>
+        confira o código na integra <a href="https://colab.research.google.com/drive/1NWTbeJiafi_gY2j8iVeFORjOndp5YgEr#scrollTo=pIKaCTsUb-Yc">aqui!</a>
+    </p>
+    <br>
+    <div class="subtitulo">Quem Somos?</div><br>
+
+    <p>
+        somos a TVLLE uma empresa de consultoria, que auxilia na criação e investimentos de nossos parceiros através de seus dados
+        <br>
+        o mercado de vinhos é um grande movimentador de economias, As importações saltaram de 120 mil toneladas, com valor total de US$ 372 milhões em 2019, para 160 mil toneladas e US$ 478 milhões em 2021, de acordo com informações do Ministério da Agricultura, Pecuária e Abastecimento (Mapa). Dessa forma a TVLLE levantou dados para avalição desse segmento de mercado para explorar seu dinamismo, crescimento e possibilidades de investimento.
+    </p>
+    <br>
+    <div class="titulo"><a name="conexao">Conexões</a></div><br>
+
+        <p>
+        Para poder disponibilizar tanto os arquivos brutos e após o tratamento, foi necessário realizar o download de bibliotecas que não são nativas do Colab
+        <img src="Screenshot_20230109_071527.jpg">
+
+        importação de mais algumas bibliotecas
+        <img src="Screenshot_20230109_071615.jpg">
+        <img src="Screenshot_20230109_071648.jpg">
+
+        E por fim mais uma instalação e a verificação do IP da máquina
+        <img src="Screenshot_20230109_071714.jpg">
+
+        Agora, com as bibliotecas necessárias para todo o escopo do projeto, o comando a seguir realiza a conexão do colab com o google claus atravês da chave se segurança disponibilizada pela plataforma
+        <img src="Screenshot_20230109_071825.jpg">
+        </p>
+        <div class="subtitulo">Conexão bucket:</div><br> 
+        <p>
+
+        Iremos disponibilizar nossos Arquivos na Bucket do GoogleClaud, atravésdo Colab realizamos o seguinte comando para conexão com o bucket correto e envio dos arquvos que passaram da memória do colab para o armazenamento em nuvem.
+        <img src="Screenshot_20230109_071924.jpg">
+
+        Os caminhos foram atribuidos a apelidos para facilitar a manipulação, como demonstra o seguinte comando:
+        <img src="Screenshot_20230109_072326.jpg">
+        </p>
+        <div class="subtitulo">Conexão MySQL:</div><br>
+        <p>
+            Para o escopo desse projeto foi necessario enviar sómente os arquivos brutos para uma minstância MySQL.
+
+        <img src="Screenshot_20230109_072539.jpg">
+        para o df1 foi necessario dropar antes de enviar pois havia mais de 700 colunas, com a maios parte com a informação NaN em suas linhas. Assim filtrando 24 colunas, que serão avaliadas sua permanencia em uma análise futura.
+        <img src="Screenshot_20230109_072539.jpg">
+
+        estabelecendoo conexão através das informações da instância:
+        <img src="Screenshot_20230109_074352.jpg">
+        
+        fi criado de forma manual na plataforma GoogleClaud um DataBase com o nome "mercadovinho". E 
+        Verificado o exito da conexão:
+        <img src="Screenshot_20230109_074439.jpg">
+
+        Já o comando a seguir conecta, envia e transforma o arquivo csv para uma tabela compativel com MySQL.
+        <img src="Screenshot_20230109_074619.jpg">
+
+        Fazendo o mesmo processo com os demais arquivos:
+        <img src="Screenshot_20230109_074726.jpg">
+
+        </p>
+    <br>
+   
+    <div class="titulo"><a name="dataset">DataSet's</a></div><br>
+
+    <p>
+        Os DF’s escolhidos foram selecionados para tanto contemplar o tema designado , quanto para explorar as skils lecionadas ao decorrer do curso. Logo, todos os DF’s possuem inconsistências nativas.
+    </p>
+    <br>
+    <p>
+        df1 está disponível no <a href="https://www.kaggle.com/datasets/gthrosa/vivino-brazilian-wines-metadata">link</a>.<br>
+        df2 está disponível no <a href="https://www.oiv.int/what-we-do/data-discovery-report?oiv">link</a>.<br>
+        df3 está disponível no <a href="51500">link</a>.<br>
+        df4, df5 e df6 estão disponíveis no <a href="https://www.tandfonline.com/doi/figure/10.1080/08109028.2014.933600?scroll=top&needAccess=true&role=tab">link</a>.<br>
+    </p>
+
+    <div class="subtitulo">Tratamento do DataFrame 1:</div><br>
+        <P>
+            O tratamento do filtro_df1 começa com as boas praticas de fazer uma copia de segurança e sobreescrevendo o df com filtro, assim voltando a utilizar df1 para esse arquivo.
+            <img src="Screenshot_20230109_075323.jpg">
+
+            Apos a vzualização e análise, foi novamente filtrando. assim mantendo as colunas de real interesse.
+            <img src="Screenshot_20230109_075400.jpg">
+
+            Em seguda, as colunas foram renomeadas, assim realizando a tradução do inglês para o português.
+            <img src="Screenshot_20230109_075513.jpg">
+
+            Em seguida, foi definido o squema das colunas e a passagem da tecnológia Pandas para a PySpark para os ajustes finais.
+            <img src="Screenshot_20230109_075636.jpg">
+
+        </P>
+    <div class="subtitulo">Tratamento do DataFrame 2:</div><br>
+    <div class="subtitulo">Tratamento do DataFrame 3:</div><br>
+    <div class="subtitulo">Tratamento dos DataFrame 4, 5 e 6:</div><br>
+    <p>
+        Por possuir colunas em comuns, foi decidido realizar o tratamento após a união dos respectivos:
+    </p><br>
+
+    <div class="titulo"><a name="insight">Insight</a></div><br>
+    <div class="titulo"><a name="automatizacao">Automatização</a></div><br>
+    <div class="titulo"><a name="looker">LookerStudio</a></div><br>
+    <div class="titulo"><a name="conclusao">Conclusão</a><br></div>
+</body>
+</html>
